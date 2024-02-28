@@ -1,0 +1,22 @@
+{
+  "id": "bdfe88dd-f8bc-4dab-8a2b-f1c29815b77d",
+  "name": "Index Package Generator",
+  "publisher": "Marije Jennifer Brummel",
+  "version": "0.1.20240129.1",
+  "dependencies": [
+  ],
+  "platform": "1.0.0.0",
+  "application": "22.0.0.0",
+  "idRanges": [
+    {
+      "from": 99900,
+      "to": 99999
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "11.0"
+}
