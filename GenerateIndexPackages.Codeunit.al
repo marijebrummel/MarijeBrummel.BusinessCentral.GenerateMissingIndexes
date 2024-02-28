@@ -1,10 +1,5 @@
 codeunit 99900 "PTE Generate Index Package"
 {
-    // To Do
-    // Create App.json with dependencies
-    // Create Table Extension per object
-
-
     trigger OnRun()
     var
         DataCompression: Codeunit "Data Compression";
