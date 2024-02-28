@@ -236,9 +236,13 @@ codeunit 99900 "PTE Generate Index Package"
     begin
         if MissingIndex.FindSet() then
             repeat
-                ObjId := FindTableID(MissingIndex."Table Name");
-                if not TableExtensions.ContainsKey(ObjId) then
-                    TableExtensions.Add(ObjId, MissingIndex."Table Name");
+                if not MissingIndex."Table Name".Contains('VSIFT') then begin
+                    if not MissingIndex."Table Name".EndsWith('$ext') then begin // Ignore Table Extensions for now...
+                        ObjId := FindTableID(MissingIndex."Table Name");
+                        if not TableExtensions.ContainsKey(ObjId) then
+                            TableExtensions.Add(ObjId, MissingIndex."Table Name");
+                    end;
+                end;
             until MissingIndex.Next() = 0;
         exit(TableExtensions);
     end;
